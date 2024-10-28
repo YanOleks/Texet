@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Texet.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Button
+                x:Name="SaveBtn"
+                Text="Save" 
+                Clicked="OnSave"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="AddColumnBtn"
+                Text="Add Column" 
+                Clicked="OnAddColumnClicked"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="AddRowBtn"
+                Text="Add Row" 
+                Clicked="OnAddRowClicked"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="RemoveColumnBtn"
+                Text="Remove Column" 
+                Clicked="OnRemoveColumnClicked"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="RemoveRowBtn"
+                Text="Remove Row" 
+                Clicked="OnRemoveRowClicked"
+                HorizontalOptions="Fill" />
+
+            <Grid x:Name="tableGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="" />
+                <Label Grid.Row="0" Grid.Column="1" Text="A" />
+                <Label Grid.Row="1" Grid.Column="0" Text="1" />
+                <Entry Grid.Row="1" Grid.Column="1" TextChanged="OnTextChanged"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
