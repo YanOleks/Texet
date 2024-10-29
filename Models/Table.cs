@@ -7,7 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-
+#if DEBUG
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("TexetTests")]
+#endif
 namespace Texet.Models;
 
 internal class Table

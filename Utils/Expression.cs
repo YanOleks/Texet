@@ -2,6 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+#if DEBUG
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("TexetTests")]
+#endif
 
 namespace Texet.Utils
 {
